@@ -1,8 +1,11 @@
 package com.agile.test.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -47,5 +50,15 @@ public class AppConfig {
         factoryBean.setHibernateProperties(properties);
         factoryBean.setPackagesToScan("com.dev.cinema.model");
         return factoryBean;
+    }
+
+    @Bean
+    public ObjectMapper getObjectMapper() {
+        return new ObjectMapper();
+    }
+
+    @Bean
+    public CloseableHttpClient getHttpClient() {
+        return HttpClients.createDefault();
     }
 }

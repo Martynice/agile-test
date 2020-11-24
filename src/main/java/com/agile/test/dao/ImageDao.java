@@ -9,5 +9,5 @@ public interface ImageDao {
 
     List<Image> getByParameter(Map<String, String[]> parameters);
 
-    void clearData();
+    void clear();
 }
