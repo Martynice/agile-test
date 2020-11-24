@@ -1,0 +1,1 @@
+CREATE SCHEMA `agile-test` DEFAULT CHARACTER SET utf8 ;
