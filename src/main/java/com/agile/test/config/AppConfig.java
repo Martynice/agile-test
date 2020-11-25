@@ -48,7 +48,7 @@ public class AppConfig {
         properties.put("hibernate.format_sql", environment.getProperty("hibernate.format_sql"));
         properties.put("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
         factoryBean.setHibernateProperties(properties);
-        factoryBean.setPackagesToScan("com.dev.cinema.model");
+        factoryBean.setPackagesToScan("com.agile.test.model");
         return factoryBean;
     }
 
